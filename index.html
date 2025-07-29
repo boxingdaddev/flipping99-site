@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flipping99 – 99 Names of Allah</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/moon-gold.png" alt="Flipping99 Logo" class="logo">
+    <h1>Flipping99</h1>
+    <p class="tagline">Flip through and learn the 99 Names of Allah with bookmarks and study tools.</p>
+    <a href="#" class="play-button">View on Google Play</a>
+  </header>
+
+  <section class="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Interactive flip cards with smooth animations</li>
+      <li>Bookmark favorites and track memorization</li>
+      <li>Study mode with organized progression</li>
+    </ul>
+  </section>
+
+  <section class="carousel">
+    <div class="frame">
+      <div class="slides">
+        <img src="assets/screenshots/screenshot1.png" alt="App Screenshot 1">
+        <img src="assets/screenshots/screenshot2.png" alt="App Screenshot 2">
+        <img src="assets/screenshots/screenshot3.png" alt="App Screenshot 3">
+        <img src="assets/screenshots/screenshot4.png" alt="App Screenshot 4">
+      </div>
+    </div>
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a>
+    <p>&copy; 2025 Flipping99</p>
+  </footer>
+
+  <script>
+    // Auto-rotating carousel
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slides img');
+    const dots = document.querySelectorAll('.dots span');
+
+    function showSlide(index) {
+      slides.forEach((img, i) => {
+        img.style.display = i === index ? 'block' : 'none';
+        dots[i].classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000);
+  </script>
+</body>
+</html>
