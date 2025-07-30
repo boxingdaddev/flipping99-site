@@ -7,23 +7,39 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="assets/moon-gold.png" alt="Flipping99 Logo" class="logo">
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <img src="assets/app-icon/icon-512.png" alt="Flipping99 App Icon" class="hero-icon">
     <h1>Flipping99</h1>
-    <p class="tagline">Flip through and learn the 99 Names of Allah with bookmarks and study tools.</p>
-    <a href="#" class="play-button">View on Google Play</a>
+    <p class="tagline">Flip, study, and reflect on the 99 Names of Allah</p>
+    <div class="cta-buttons">
+      <a href="#" class="play-button">Download on Google Play</a>
+      <a href="https://github.com/yourusername/flipping99" class="secondary-button">View on GitHub</a>
+    </div>
   </header>
 
+  <!-- FEATURES SECTION -->
   <section class="features">
     <h2>Features</h2>
-    <ul>
-      <li>Interactive flip cards with smooth animations</li>
-      <li>Bookmark favorites and track memorization</li>
-      <li>Study mode with organized progression</li>
-    </ul>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <h3>Flip Cards</h3>
+        <p>Interactive cards showing Arabic, transliteration, and meaning.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Bookmark & Study</h3>
+        <p>Track your favorites, studying, and memorized names with ease.</p>
+      </div>
+      <div class="feature-item">
+        <h3>Progress Tracking</h3>
+        <p>Visual counters to see how far you’ve come in your learning journey.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- SCREENSHOTS / CAROUSEL SECTION -->
   <section class="carousel">
+    <h2>App Screenshots</h2>
     <div class="frame">
       <div class="slides">
         <img src="assets/screenshots/screenshot1.png" alt="App Screenshot 1">
@@ -40,13 +56,14 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <a href="privacy.html">Privacy Policy</a>
     <p>&copy; 2025 Flipping99</p>
   </footer>
 
   <script>
-    // Auto-rotating carousel
+    // Carousel functionality (kept from your original)
     let currentIndex = 0;
     const slides = document.querySelectorAll('.slides img');
     const dots = document.querySelectorAll('.dots span');
